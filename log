@@ -52,3 +52,39 @@ Fri 14 Oct 2022 03:55:46 PM UTC:
  tests:  2|2
 total_score: 20/70
 932ad3f
+Fri 14 Oct 2022 04:39:05 PM UTC: 
+ heap.c | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:20: error: ‘HeapElem’ undeclared (first use in this function); did you mean ‘heapElem’?
+   30 |   heapElem* new = (HeapElem*)malloc(sizeof(heapElem));
+      |                    ^~~~~~~~
+      |                    heapElem
+heap.c:30:20: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:30:29: error: expected expression before ‘)’ token
+   30 |   heapElem* new = (HeapElem*)malloc(sizeof(heapElem));
+      |                             ^
+heap.c:35:32: error: expected ‘;’ before ‘pq’
+   35 |     pq->capac = pq->capac*2 + 1
+      |                                ^
+      |                                ;
+   36 |     pq->heapArray = realloc(pq->heapArray,pq->capac);
+      |     ~~                          
+heap.c:38:29: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘heapElem *’ {aka ‘struct nodo *’}
+   38 |   pq->heapArray[pq->size] = new;
+      |                             ^~~
+heap.c:41:23: error: expected expression before ‘int’
+   41 |     if (pq->heapArray[int((y-1)/2)]->priority < new->priority){
+      |                       ^~~
+heap.c:42:39: error: expected expression before ‘int’
+   42 |       pq->heapArray[y]= pq->heapArray[int((y-1)/2)];
+      |                                       ^~~
+heap.c:43:21: error: expected expression before ‘int’
+   43 |       pq->heapArray[int((y-1)/2)] = new;
+      |                     ^~~
+heap.c:44:11: error: expected expression before ‘int’
+   44 |       y = int((y-1)/2);
+      |           ^~~
+Compilation failed
+5709fed

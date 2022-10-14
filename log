@@ -204,3 +204,16 @@ heap.c:41:49: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka
       |                                                 ^~
 Compilation failed
 f22b159
+Fri 14 Oct 2022 04:42:49 PM UTC: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:18: error: invalid initializer
+   30 |   heapElem new = (heapElem*)malloc(sizeof(heapElem));
+      |                  ^
+heap.c:41:33: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   41 |     if (pq->heapArray[((y-1)/2)]->priority < new.priority){
+      |                                 ^~
+Compilation failed
+c331aea

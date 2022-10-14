@@ -28,8 +28,8 @@ void* heap_top(Heap* pq){
 
 void heap_push(Heap* pq, void* data, int priority){
   heapElem new = (heapElem*)malloc(sizeof(heapElem));
-  new->data = data;
-  new->priority = priority;
+  new.data = data;
+  new.priority = priority;
   pq->size++;
   if(pq->size>=pq->capac){
     pq->capac = pq->capac*2 + 1;
@@ -38,7 +38,7 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[pq->size] = new;
   int y =pq->size;
   while(1){
-    if (pq->heapArray[((y-1)/2)]->priority < new->priority){
+    if (pq->heapArray[((y-1)/2)]->priority < new.priority){
       pq->heapArray[y]= pq->heapArray[((y-1)/2)];
       pq->heapArray[((y-1)/2)] = new;
       y = ((y-1)/2);

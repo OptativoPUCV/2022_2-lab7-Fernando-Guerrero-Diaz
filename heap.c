@@ -42,7 +42,7 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray[y]= pq->heapArray[((y-1)/2)];
       pq->heapArray[((y-1)/2)] = new;
       y = ((y-1)/2);
-      if (y<=0) break;
+      if (y<0) break;
     }
     else break;
   }

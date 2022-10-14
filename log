@@ -217,3 +217,13 @@ heap.c:41:33: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka
       |                                 ^~
 Compilation failed
 c331aea
+Fri 14 Oct 2022 04:43:00 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:18: error: invalid initializer
+   30 |   heapElem new = (heapElem*)malloc(sizeof(heapElem));
+      |                  ^
+Compilation failed
+8f81a6b

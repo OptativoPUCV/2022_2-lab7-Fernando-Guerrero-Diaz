@@ -318,3 +318,20 @@ heap.c:35:36: error: expected ‘;’ before ‘)’ token
 heap.c:35:36: error: expected statement before ‘)’ token
 Compilation failed
 8b3b393
+Fri 14 Oct 2022 05:14:57 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:35:5: error: expected ‘,’ or ‘;’ before ‘for’
+   35 |     for (int i = 0; i<pq->size; i++;){
+      |     ^~~
+heap.c:35:21: error: ‘i’ undeclared (first use in this function)
+   35 |     for (int i = 0; i<pq->size; i++;){
+      |                     ^
+heap.c:35:21: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:35:37: error: expected statement before ‘)’ token
+   35 |     for (int i = 0; i<pq->size; i++;){
+      |                                     ^
+Compilation failed
+7401834

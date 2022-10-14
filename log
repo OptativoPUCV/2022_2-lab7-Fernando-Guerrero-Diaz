@@ -365,3 +365,14 @@ heap.c:63:32: error: ‘capac’ undeclared (first use in this function)
       |                                ^~~~~
 Compilation failed
 86c7c88
+Fri 14 Oct 2022 11:46:46 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:60:3: error: ‘x’ undeclared (first use in this function)
+   60 |   x = 0;
+      |   ^
+heap.c:60:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+25c30d9

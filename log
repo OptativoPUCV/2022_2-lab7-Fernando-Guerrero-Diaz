@@ -287,3 +287,9 @@ Fri 14 Oct 2022 05:04:07 PM UTC:
  tests:  6|2
 total_score: 35/70
 11cd67b
+Fri 14 Oct 2022 05:06:29 PM UTC: 
+ heap.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+ tests:  2|2
+total_score: 20/70
+5228d05

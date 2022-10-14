@@ -57,7 +57,7 @@ void heap_pop(Heap* pq){
   pq->size--;
   pq->heapArray[0]=pq->heapArray[pq->size];
   pq->heapArray[pq->size].priority=0;
-  x = 0;
+  int x = 0;
   void* data;
   int priority;
   while(x<pq->size && (x*2)+2 <pq->capac){

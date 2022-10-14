@@ -376,3 +376,9 @@ heap.c:60:3: error: ‘x’ undeclared (first use in this function)
 heap.c:60:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 25c30d9
+Fri 14 Oct 2022 11:46:54 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|0
+total_score: 70/70
+9d5c802

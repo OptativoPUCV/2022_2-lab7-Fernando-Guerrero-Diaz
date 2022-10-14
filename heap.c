@@ -27,7 +27,7 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-  heapElem new = (heapElem*)malloc(sizeof(heapElem));
+  heapElem new;
   new.data = data;
   new.priority = priority;
   pq->size++;

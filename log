@@ -166,3 +166,19 @@ heap.c:44:11: error: expected expression before ‘int’
       |           ^~~
 Compilation failed
 cf5bd52
+Fri 14 Oct 2022 04:41:11 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:38:29: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘heapElem *’ {aka ‘struct nodo *’}
+   38 |   pq->heapArray[pq->size] = new;
+      |                             ^~~
+heap.c:41:33: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   41 |     if (pq->heapArray[((y-1)/2)]->priority < new->priority){
+      |                                 ^~
+heap.c:43:34: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘heapElem *’ {aka ‘struct nodo *’}
+   43 |       pq->heapArray[((y-1)/2)] = new;
+      |                                  ^~~
+Compilation failed
+4102992

@@ -31,8 +31,8 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->size++;
   if(pq->size>=pq->capac){
     pq->capac = pq->capac*2 + 1;
-    heapElem* newArray = (heapElem*)malloc(pq->capac * sizeof(heapElem))
-    for (int i = 0, i<pq->size, i++){
+    heapElem* newArray = (heapElem*)malloc(pq->capac * sizeof(heapElem));
+    for (int i = 0; i<pq->size; i++){
       newArray[i]=pq->heapArray[i];
     }
     pq->heapArray = newArray;
